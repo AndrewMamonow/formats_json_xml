@@ -14,7 +14,7 @@ def file_read_list(file_name):
         # all_news.extend(new.lower().split())
     return all_news
 # Функция подсчета количества слов длиной больше 6 в списке 
-def word_dict(all_news, len_word=6):
+def word_dict(all_news, len_word = 6):
     news_dict = {}
     for word in all_news:
         if len(word) > len_word:
@@ -22,7 +22,7 @@ def word_dict(all_news, len_word=6):
             news_dict[word] += 1
     return news_dict
 # Функция сортировки словаря и выбора из списка слов топ 10 по частоте
-def sort_dict(news_dict, count_word=10):
+def sort_dict(news_dict, count_word = 10):
     news_dict_sort = {}
     for key in sorted(news_dict, key = news_dict.get, reverse=True):
         news_dict_sort[key] = news_dict[key]
